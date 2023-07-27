@@ -28,7 +28,11 @@ CNN 기반의 운동기구 이미지 분류 모델
 ```
 python main.py --train_dir  --val_dir  --save_path 
 ```
+* --train_dir: train 데이터셋 경로
+* --val_dir: val 데이터셋 경로
 ### Inference
 ```
 python inference.py --test_dir  --model_path
 ```
+* --test_dir: test 데이터셋 경로
+* --model_path: 학습된 모델이 저장된 경로
