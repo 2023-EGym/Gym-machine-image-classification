@@ -1,7 +1,16 @@
+import argparse
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+
+def get_args_parser():
+    # define the argparse for the script
+    parser = argparse.ArgumentParser('Training setting', add_help=False)
+    parser.add_argument('--test_dir', type=str, help='root path of the test dataset')
+    parser.add_argument('--model_path', type=str, help='root path of saved model')
+
 
 def inference(model_path, test_dir):
     model = load_model(model_path)
@@ -51,3 +60,10 @@ def inference(model_path, test_dir):
     # Calculate overall accuracy on the test dataset
     accuracy = np.mean(predicted_labels == true_labels)
     print("Overall Test Accuracy:", accuracy)
+    
+    
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser('Inference', parents=[get_args_parser()])
+    args = parser.parse_args()
+
+    inference(args.model_path, args.test_dir)
