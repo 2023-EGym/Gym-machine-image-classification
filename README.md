@@ -7,7 +7,7 @@ CNN 기반의 운동기구 이미지 분류 모델
 - [Model reference code](https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50)
 
 ## Dataset
-- 직접 크롤링한 운동기구 이미지 데이터셋 사용
+- 직접 각 운동기구 이미지 크롤링 후 데이터셋 생성
 - 아래와 같이 train, val, test 각 디렉토리에 나눈 뒤 사용 
 ```bash
     ├── data
