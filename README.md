@@ -31,7 +31,3 @@ python main.py --train_dir  --val_dir  --save_path
 ```
 python inference.py --test_dir  --model_path
 ```
-### Make tffile 
-```
-python h5_to_tffile.py --save_path  --model_path
-```
