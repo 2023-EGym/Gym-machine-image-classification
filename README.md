@@ -30,6 +30,7 @@ python main.py --train_dir  --val_dir  --save_path
 ```
 * --train_dir: train 데이터셋 경로
 * --val_dir: val 데이터셋 경로
+* --save_path: 학습할 모델을 저장할 경로
 ### Inference
 ```
 python inference.py --test_dir  --model_path
