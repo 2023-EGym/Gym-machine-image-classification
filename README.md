@@ -9,15 +9,12 @@ CNN 기반의 운동기구 이미지 분류 모델
 ### Training
 ```
 python main.py --train_dir  --val_dir  --save_path 
-
 ```
 ### Inference
 ```
 python inference.py --test_dir  --model_path
-
 ```
 ### Make tffile 
 ```
 python h5_to_tffile.py --save_path  --model_path
-
 ```
