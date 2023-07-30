@@ -3,7 +3,7 @@ CNN 기반의 운동기구 이미지 분류 모델
 
 ## Model
 > ### Resnet
-- [paper](https://arxiv.org/abs/1512.03385)
+- [Paper](https://arxiv.org/abs/1512.03385)
 - [Model reference code](https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50)
 
 ## Dataset
