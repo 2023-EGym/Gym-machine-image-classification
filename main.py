@@ -62,7 +62,7 @@ def main(train_generator, val_generator, model, callbacks, batch_size, epochs):
     )
 
     # Save the trained model (optional)
-    model.save('/content/drive/MyDrive/gym_classification/log/add_data_model2_30ep.h5')
+    model.save('/content/drive/MyDrive/gym_classification/log/vitl16_new.h5')
 
 
 
