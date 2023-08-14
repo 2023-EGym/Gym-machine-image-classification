@@ -3,7 +3,8 @@ import argparse
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.optimizers import Adam
 from dataloader import make_dataset
-from model import model_2
+#from model import model_2
+from model import teacher_model
 
 def get_args_parser():
     # define the argparse for the script
@@ -69,6 +70,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser('Training model', parents=[get_args_parser()])
     args = parser.parse_args()
     train_generator, val_generator = make_dataset(args.train_dir, args.val_dir, args.image_width, args.image_height, args.batch_size)
-    model = model_2(args.num_classes, input_shape = (args.image_width, args.image_height, 3))
+    model = teacher_model(args.num_classes, input_shape = (args.image_width, args.image_height, 3))
     callbacks = check_point(args.save_path)
     main(train_generator, val_generator, model, callbacks, args.batch_size, args.epochs)
