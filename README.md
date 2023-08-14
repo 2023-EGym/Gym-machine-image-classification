@@ -24,13 +24,20 @@ CNN 기반의 운동기구 이미지 분류 모델
 ```
 
 ## How to run
-### Training
+### Train teacher model
 ```
 python main.py --train_dir  --val_dir  --save_path 
 ```
 * --train_dir: train 데이터셋 경로
 * --val_dir: val 데이터셋 경로
 * --save_path: 학습할 모델을 저장할 경로
+### Train student model (optional)
+```
+python trainer.py --train_dir  --val_dir  
+```
+* --train_dir: train 데이터셋 경로
+* --val_dir: val 데이터셋 경로
+* 모델의 경량화를 위해 실시
 ### Inference
 ```
 python inference.py --test_dir  --model_path
